@@ -1,0 +1,280 @@
+/***************************
+         HEADER
+****************************/
+header{
+    width:100%;
+    background:linear-gradient(to bottom, rgba(1,1,1,0.8) 10%, rgba(1,1,1,0.6) 50%, rgba(1,1,1,0.4) 100%), url("../../assets/images/about_header.jpg");
+    background-size:cover;
+    color:var(--white);
+    text-align:left;
+    overflow:hidden !important;
+    align-items:center;
+    justify-content:left;
+    height:60vh;
+}
+
+header:after{
+    content:"";
+    position:absolute;
+    z-index:1;
+    width:250px;
+    height:250px;
+    right:-100px;
+    bottom:-100px;
+    background-color:transparent;
+    border-radius:50%;
+    border:2em solid var(--primary_lite);
+}
+
+header article{
+    width:90%;
+    z-index:11;
+}
+
+header .title{
+    color:var(--white);
+}
+
+@media (max-width:920px){
+    header{
+        height:40vh;
+    }
+    
+    header article{
+        width:90%;
+    }
+    
+    header:after{
+        width:150px;
+        height:150px;
+        right:-60px;
+        bottom:-60px;
+        border:1em solid var(--primary_lite);
+    }
+}
+
+@media (max-width:620px){
+    header{
+        height:30vh;
+    }
+    
+    header article{
+        width:100%;
+    }
+    
+    header:after{
+        width:100px;
+        height:100px;
+        right:-30px;
+        bottom:-30px;
+    }
+}
+
+
+
+
+/***************************
+         MAIN
+****************************/
+main{
+    
+}
+
+
+/*DIVISION_1*/
+.division_1{
+    align-items:center;
+}
+
+.division_1 figure{
+    width:100%;
+    margin:auto;
+}
+
+.division_1 figure:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:11;
+    background:url("../../assets/images/about_01.jpg");
+    background-size:cover;
+    border-radius:20px;
+    overflow:hidden;
+    filter:blur(2px);
+    clip-path: polygon(26% 0, 100% 0, 100% 75%, 75% 100%, 0 100%, 0% 25%);
+}
+
+.division_1 figure:after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:var(--white);
+    z-index:1;
+}
+
+.division_1 figure figcaption{
+    position:absolute;
+    bottom:1rem;
+    right:-1rem;
+    box-shadow:0px 6px 16px -6px rgba(1,1,1,0.4);
+    border-radius:5px;
+    background-color:var(--white);
+    z-index:22;
+    flex-wrap:wrap;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.graph{
+    width:80px;
+    height:80px;
+    flex-wrap:wrap;
+    position:relative;
+    border-radius:50%;
+    overflow:hidden;
+    margin:1rem auto;
+}
+
+.graph:before{
+    content:"";
+    position:absolute;
+    z-index:22;
+    width:70px;
+    height:70px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    background-color:var(--white);
+    border-radius:50%;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.graph li{
+    flex:1 1 50%;
+    position:relative;
+}
+
+.graph li:first-child{
+    flex:1 1 20%;
+    background-color:var(--primary);
+}
+
+.graph li:nth-child(2){
+    flex:1 1 30%;
+    background-color:var(--yellow);
+}
+
+.graph li:nth-child(3){
+    flex:1 1 50%;
+    background-color:var(--blue);
+}
+
+.graph li:last-child{
+    background-color:var(--dark);
+}
+
+.division_1 figcaption .title{
+    margin:0;
+    font-weight:500;
+}
+
+.graph_details{
+    font-size:12px;
+}
+
+.graph_details li{
+    align-items:center;
+}
+
+.graph_details iconify-icon{
+    font-size:8px;
+    margin-right:5px;
+    color:var(--gray);
+}
+
+.graph_details li:first-child iconify-icon{
+    color:var(--primary);
+}
+
+.graph_details li:nth-child(2) iconify-icon{
+    color:var(--yellow);
+}
+
+.graph_details li:nth-child(3) iconify-icon{
+    color:var(--blue);
+}
+
+.graph_details li:last-child iconify-icon{
+    color:var(--dark);
+}
+
+.division_1 .right_section ul li{
+    font-weight:300;
+    line-height:1.9em;
+    font-size:13px;
+    opacity:0.5;
+    padding:0.3rem 0;
+}
+
+.division_1 .right_section ul li:before{
+    content:"\f0da";
+    font-family:"FontAwesome";
+    color:var(--primary);
+    margin-right:10px;
+}
+
+@media (max-width:1080px){   
+    .division_1 .right_section ul li{
+        font-size:11px;
+    }
+}
+
+@media (max-width:720px){
+    .division_1{
+        flex-wrap:wrap;
+    }
+} 
+
+@media (max-width:620px){
+    .division_1{
+        padding:0 !important;
+    }
+    
+    .division_1 .left_section{
+        width:100%;
+    }
+    
+    .division_1 figure figcaption{
+        right:0;
+    }
+}
+
+
+/*DIVISION_2*/
+.division_2{
+    width:100%;
+    background-color:var(--primary);
+    text-align:center;
+    color:var(--white);
+}
+
+.division_2 .title{
+    color:var(--white);
+    margin:0;
+}
+
+.division_2 .btn{
+    margin:auto;
+    color:var(--white);
+}
+
+.division_2 .btn_3:hover{
+    color:var(--dark);
+}

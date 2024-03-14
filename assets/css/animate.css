@@ -1,0 +1,95 @@
+/*Scroll down*/
+.cs-down{
+    position: absolute;
+    height: 35px;
+    width: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--white);
+    bottom: 10px;
+    left: 50%;
+    margin-left: -10px;
+    z-index:11;
+}
+
+.cs-down:before{
+    content: '';
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    -webkit-animation: UpAndDown 3s infinite;
+    animation: UpAndDown 3s infinite;
+}
+
+@-webkit-keyframes UpAndDown {
+  0%,
+  100% {
+    top: 30%;
+  }
+  50% {
+    top: 70%;
+    opacity: 0.5;
+    -webkit-transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+@keyframes UpAndDown {
+  0%,
+  100% {
+    top: 30%;
+  }
+  50% {
+    top: 70%;
+    opacity: 0.5;
+    -webkit-transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+
+@-webkit-keyframes swipe_down {
+  100%{
+    top:0px;
+  }
+}
+
+@keyframes swipe_down {
+100%{
+    top:0px;
+  }
+}
+
+@-webkit-keyframes swipe_up {
+  100%{
+    top:-150px;
+  }
+}
+
+@keyframes swipe_up {
+100%{
+    top:-150px;
+  }
+}
+
+
+/*ZOOM IN*/
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
